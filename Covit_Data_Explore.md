@@ -730,9 +730,7 @@ autolabel(rect)
 ```
 
 
-    
 ![png](output_28_0.png)
-    
 
 
 # Top 20 countries with highest cumulative infection rates
@@ -978,16 +976,14 @@ autolabel(rect)
 ```
 
 
-    
 ![png](output_35_0.png)
-    
 
 
 # Top 20 countries of vaccinations
 
 
 ```python
-total_vac = data[['date','location','total_vaccinations', 'new_cases_smoothed_per_million']]
+total_vac = data[['date','location','total_vaccinations', 'new_cases_smoothed_per_million', 'stringency_index']]
 ```
 
 
@@ -1033,9 +1029,7 @@ autolabel(rect)
 ```
 
 
-    
 ![png](output_42_0.png)
-    
 
 
 # Israel Covit trend after vaccinations
@@ -1073,9 +1067,34 @@ plt.show()
 ```
 
 
-    
 ![png](output_46_0.png)
-    
+
+
+# Israel New Cases vs. Restrictions (Stringency) Index
+
+
+```python
+fig, ax = plt.subplots(figsize=(25,15))
+color = 'red'
+ax.set_xlabel('Date')
+ax.set_ylabel('New Cases Per Million (Smoothed)', color=color, fontsize = 20)
+ax.plot(Israel_vac['date'], Israel_vac['new_cases_smoothed_per_million'], color = color)
+ax.tick_params(axis='y', labelcolor=color, labelsize =20)
+ax.set_title('Israel: New Cases vs. Restrictions Index, As Of Feb. 01, 2021', fontsize=40)
+
+ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'blue'
+ax2.set_ylabel('Government Restrictions Index', color=color, fontsize =20)  # we already handled the x-label with ax1
+ax2.plot(Israel_vac['date'], Israel_vac['stringency_index'], color=color)
+ax2.tick_params(axis='y', labelcolor=color, labelsize =20)
+
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.show()
+```
+
+
+![png](output_48_0.png)
 
 
 # US Covit trend after vaccinations
@@ -1112,9 +1131,34 @@ plt.show()
 ```
 
 
-    
-![png](output_50_0.png)
-    
+![png](output_52_0.png)
+
+
+# US New Cases vs. Restrictions Index
+
+
+```python
+fig, ax = plt.subplots(figsize=(25,15))
+color = 'tab:red'
+ax.set_xlabel('Date')
+ax.set_ylabel('New Cases Per Million (Smoothed)', color=color, fontsize = 20)
+ax.plot(US_vac['date'], US_vac['new_cases_smoothed_per_million'], color = color)
+ax.tick_params(axis='y', labelcolor=color, labelsize = 20)
+ax.set_title('US: New Cases vs. Restrictions Index, As Of Feb. 01, 2021', fontsize=40)
+
+ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'blue'
+ax2.set_ylabel('Government Restrictions Index', color=color, fontsize =20)  # we already handled the x-label with ax1
+ax2.plot(US_vac['date'], US_vac['stringency_index'], color=color)
+ax2.tick_params(axis='y', labelcolor=color, labelsize = 20)
+
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.show()
+```
+
+
+![png](output_54_0.png)
 
 
 # India Covit trend after vaccinations
@@ -1151,9 +1195,34 @@ plt.show()
 ```
 
 
-    
-![png](output_54_0.png)
-    
+![png](output_58_0.png)
+
+
+# India: New Cases vs. Restrictions Index
+
+
+```python
+fig, ax = plt.subplots(figsize = (25,15))
+color = 'tab:red'
+ax.set_xlabel('Date')
+ax.set_ylabel('New Cases Per Million (Smoothed)', color=color, fontsize = 20)
+ax.plot(India_vac['date'], India_vac['new_cases_smoothed_per_million'], color = color)
+ax.tick_params(axis='y', labelcolor=color, labelsize = 20)
+ax.set_title('India: New Cases vs.Restrictions Index As Of Feb. 01, 2021', fontsize=40)
+
+ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'blue'
+ax2.set_ylabel('Government Restrictions Index', color=color, fontsize =20)  # we already handled the x-label with ax1
+ax2.plot(India_vac['date'], India_vac['stringency_index'], color=color)
+ax2.tick_params(axis='y', labelcolor=color, labelsize = 20)
+
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.show()
+```
+
+
+![png](output_60_0.png)
 
 
 
