@@ -1,14 +1,8 @@
 # Covid-19 Data Exploration
 
+# As of February 13, 2021
 
-```python
-# As of February 5, 2021
-```
-
-
-```python
-### Data source: John Hopkins University, OneWorldInData
-```
+### Data source: John Hopkins University, Our World In Data
 
 
 ```python
@@ -33,7 +27,7 @@ import matplotlib.pyplot as plt
 
 
 ```python
-data = pd.read_csv('/Users/sz/Desktop/Desktop-Docs/DataAnalytics/My-Projects/Covid/owid-covid-data205.csv', header =0)
+data = pd.read_csv('/Users/sz/Desktop/Desktop-Docs/DataAnalytics/My-Projects/Covid/owid-covid-data213.csv', header =0)
 ```
 
 ## Data Profile
@@ -90,75 +84,75 @@ data.describe()
   <tbody>
     <tr>
       <th>count</th>
-      <td>6.635600e+04</td>
-      <td>66354.000000</td>
-      <td>65353.000000</td>
-      <td>5.753000e+04</td>
-      <td>57688.000000</td>
-      <td>65353.000000</td>
-      <td>63387.000000</td>
-      <td>63380.000000</td>
-      <td>62426.000000</td>
-      <td>54728.000000</td>
+      <td>6.794800e+04</td>
+      <td>67946.000000</td>
+      <td>66945.000000</td>
+      <td>5.903400e+04</td>
+      <td>59192.000000</td>
+      <td>66945.000000</td>
+      <td>67575.000000</td>
+      <td>67573.000000</td>
+      <td>66577.000000</td>
+      <td>58674.000000</td>
       <td>...</td>
-      <td>61267.000000</td>
-      <td>41923.000000</td>
-      <td>61892.000000</td>
-      <td>62619.000000</td>
-      <td>48806.000000</td>
-      <td>48137.000000</td>
-      <td>31027.000000</td>
-      <td>56809.00000</td>
-      <td>63664.000000</td>
-      <td>61544.000000</td>
+      <td>62795.000000</td>
+      <td>42923.000000</td>
+      <td>63404.000000</td>
+      <td>64180.000000</td>
+      <td>49950.000000</td>
+      <td>49265.000000</td>
+      <td>31787.000000</td>
+      <td>58145.000000</td>
+      <td>65361.000000</td>
+      <td>63389.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>5.269616e+05</td>
-      <td>5033.168686</td>
-      <td>5037.098086</td>
-      <td>1.654426e+04</td>
-      <td>128.065716</td>
-      <td>110.874822</td>
-      <td>6074.245022</td>
-      <td>61.784679</td>
-      <td>61.663292</td>
-      <td>147.372649</td>
+      <td>5.548920e+05</td>
+      <td>5064.340300</td>
+      <td>5082.562795</td>
+      <td>1.715094e+04</td>
+      <td>129.963627</td>
+      <td>113.046315</td>
+      <td>6468.779339</td>
+      <td>63.112319</td>
+      <td>63.093987</td>
+      <td>157.705317</td>
       <td>...</td>
-      <td>19135.297555</td>
-      <td>13.206223</td>
-      <td>256.697326</td>
-      <td>7.775345</td>
-      <td>10.570761</td>
-      <td>32.648230</td>
-      <td>51.082211</td>
-      <td>3.04047</td>
-      <td>73.124476</td>
-      <td>0.715365</td>
+      <td>19144.309006</td>
+      <td>13.223151</td>
+      <td>256.800195</td>
+      <td>7.785153</td>
+      <td>10.566935</td>
+      <td>32.649145</td>
+      <td>51.062812</td>
+      <td>3.039524</td>
+      <td>73.139765</td>
+      <td>0.728370</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>3.737753e+06</td>
-      <td>32240.645300</td>
-      <td>31927.605632</td>
-      <td>9.513764e+04</td>
-      <td>707.032942</td>
-      <td>636.313471</td>
-      <td>12296.997480</td>
-      <td>167.019163</td>
-      <td>139.341607</td>
-      <td>271.324044</td>
+      <td>3.932948e+06</td>
+      <td>32248.723442</td>
+      <td>32011.920922</td>
+      <td>9.911383e+04</td>
+      <td>717.564577</td>
+      <td>648.782198</td>
+      <td>12927.355484</td>
+      <td>165.668127</td>
+      <td>138.762491</td>
+      <td>283.829605</td>
       <td>...</td>
-      <td>19651.407915</td>
-      <td>19.894231</td>
-      <td>118.180448</td>
-      <td>3.907344</td>
-      <td>10.415840</td>
-      <td>13.458162</td>
-      <td>31.771871</td>
-      <td>2.47005</td>
-      <td>7.546741</td>
-      <td>0.153728</td>
+      <td>19657.152742</td>
+      <td>19.900522</td>
+      <td>118.249601</td>
+      <td>3.917063</td>
+      <td>10.414847</td>
+      <td>13.459652</td>
+      <td>31.770906</td>
+      <td>2.469340</td>
+      <td>7.548923</td>
+      <td>0.150148</td>
     </tr>
     <tr>
       <th>min</th>
@@ -180,22 +174,22 @@ data.describe()
       <td>0.100000</td>
       <td>7.700000</td>
       <td>1.188000</td>
-      <td>0.10000</td>
+      <td>0.100000</td>
       <td>53.280000</td>
-      <td>0.354000</td>
+      <td>0.394000</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>6.087500e+02</td>
+      <td>6.450000e+02</td>
       <td>1.000000</td>
-      <td>5.143000</td>
-      <td>3.300000e+01</td>
+      <td>5.429000</td>
+      <td>3.400000e+01</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>114.574000</td>
-      <td>0.084000</td>
-      <td>0.871250</td>
-      <td>4.993000</td>
+      <td>124.423000</td>
+      <td>0.118000</td>
+      <td>0.926000</td>
+      <td>5.175000</td>
       <td>...</td>
       <td>4541.795000</td>
       <td>0.500000</td>
@@ -204,46 +198,46 @@ data.describe()
       <td>1.900000</td>
       <td>21.600000</td>
       <td>20.859000</td>
-      <td>1.30000</td>
+      <td>1.300000</td>
       <td>67.440000</td>
-      <td>0.590000</td>
+      <td>0.606000</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>6.444000e+03</td>
-      <td>53.000000</td>
-      <td>63.714000</td>
-      <td>2.060000e+02</td>
+      <td>6.878500e+03</td>
+      <td>54.000000</td>
+      <td>65.714000</td>
+      <td>2.180000e+02</td>
       <td>1.000000</td>
       <td>0.857000</td>
-      <td>891.585000</td>
-      <td>5.182000</td>
-      <td>7.113000</td>
-      <td>25.883000</td>
+      <td>950.436000</td>
+      <td>5.774000</td>
+      <td>7.710000</td>
+      <td>27.750000</td>
       <td>...</td>
-      <td>13111.214000</td>
+      <td>12951.839000</td>
       <td>2.000000</td>
       <td>242.648000</td>
       <td>7.110000</td>
       <td>6.300000</td>
       <td>31.400000</td>
       <td>49.839000</td>
-      <td>2.40000</td>
-      <td>74.530000</td>
-      <td>0.747000</td>
+      <td>2.400000</td>
+      <td>74.620000</td>
+      <td>0.748000</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>7.120125e+04</td>
-      <td>618.000000</td>
-      <td>639.857000</td>
-      <td>1.972000e+03</td>
+      <td>7.519950e+04</td>
+      <td>633.000000</td>
+      <td>655.571000</td>
+      <td>2.050000e+03</td>
       <td>15.000000</td>
-      <td>11.286000</td>
-      <td>5464.184000</td>
-      <td>48.000000</td>
-      <td>53.624250</td>
-      <td>142.021000</td>
+      <td>11.571000</td>
+      <td>5818.941500</td>
+      <td>51.021000</td>
+      <td>57.375000</td>
+      <td>164.550500</td>
       <td>...</td>
       <td>27216.445000</td>
       <td>21.200000</td>
@@ -252,22 +246,22 @@ data.describe()
       <td>19.300000</td>
       <td>41.100000</td>
       <td>83.241000</td>
-      <td>4.00000</td>
-      <td>78.570000</td>
-      <td>0.843000</td>
+      <td>4.000000</td>
+      <td>78.730000</td>
+      <td>0.848000</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>1.053926e+08</td>
+      <td>1.085369e+08</td>
       <td>858062.000000</td>
       <td>738534.000000</td>
-      <td>2.299235e+06</td>
-      <td>17882.000000</td>
-      <td>14402.429000</td>
-      <td>131650.812000</td>
+      <td>2.393751e+06</td>
+      <td>17886.000000</td>
+      <td>14405.857000</td>
+      <td>135417.071000</td>
       <td>8652.658000</td>
       <td>2648.773000</td>
-      <td>2003.654000</td>
+      <td>2121.516000</td>
       <td>...</td>
       <td>116935.600000</td>
       <td>77.600000</td>
@@ -276,9 +270,9 @@ data.describe()
       <td>44.000000</td>
       <td>78.100000</td>
       <td>98.999000</td>
-      <td>13.80000</td>
+      <td>13.800000</td>
       <td>86.750000</td>
-      <td>0.953000</td>
+      <td>0.957000</td>
     </tr>
   </tbody>
 </table>
@@ -293,71 +287,71 @@ data.info()
 ```
 
     <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 66967 entries, 0 to 66966
+    RangeIndex: 68774 entries, 0 to 68773
     Data columns (total 59 columns):
      #   Column                                 Non-Null Count  Dtype  
     ---  ------                                 --------------  -----  
-     0   iso_code                               63993 non-null  object 
-     1   continent                              63612 non-null  object 
-     2   location                               66967 non-null  object 
-     3   date                                   66967 non-null  object 
-     4   total_cases                            66356 non-null  float64
-     5   new_cases                              66354 non-null  float64
-     6   new_cases_smoothed                     65353 non-null  float64
-     7   total_deaths                           57530 non-null  float64
-     8   new_deaths                             57688 non-null  float64
-     9   new_deaths_smoothed                    65353 non-null  float64
-     10  total_cases_per_million                63387 non-null  float64
-     11  new_cases_per_million                  63380 non-null  float64
-     12  new_cases_smoothed_per_million         62426 non-null  float64
-     13  total_deaths_per_million               54728 non-null  float64
-     14  new_deaths_per_million                 54727 non-null  float64
-     15  new_deaths_smoothed_per_million        62426 non-null  float64
+     0   iso_code                               68774 non-null  object 
+     1   continent                              65338 non-null  object 
+     2   location                               68774 non-null  object 
+     3   date                                   68774 non-null  object 
+     4   total_cases                            67948 non-null  float64
+     5   new_cases                              67946 non-null  float64
+     6   new_cases_smoothed                     66945 non-null  float64
+     7   total_deaths                           59034 non-null  float64
+     8   new_deaths                             59192 non-null  float64
+     9   new_deaths_smoothed                    66945 non-null  float64
+     10  total_cases_per_million                67575 non-null  float64
+     11  new_cases_per_million                  67573 non-null  float64
+     12  new_cases_smoothed_per_million         66577 non-null  float64
+     13  total_deaths_per_million               58674 non-null  float64
+     14  new_deaths_per_million                 58832 non-null  float64
+     15  new_deaths_smoothed_per_million        66577 non-null  float64
      16  reproduction_rate                      51295 non-null  float64
-     17  icu_patients                           7167 non-null   float64
-     18  icu_patients_per_million               7167 non-null   float64
-     19  hosp_patients                          8519 non-null   float64
-     20  hosp_patients_per_million              8519 non-null   float64
-     21  weekly_icu_admissions                  672 non-null    float64
-     22  weekly_icu_admissions_per_million      672 non-null    float64
-     23  weekly_hosp_admissions                 1112 non-null   float64
-     24  weekly_hosp_admissions_per_million     1112 non-null   float64
-     25  new_tests                              30556 non-null  float64
-     26  total_tests                            30344 non-null  float64
-     27  total_tests_per_thousand               30344 non-null  float64
-     28  new_tests_per_thousand                 30556 non-null  float64
-     29  new_tests_smoothed                     34427 non-null  float64
-     30  new_tests_smoothed_per_thousand        34427 non-null  float64
-     31  positive_rate                          32574 non-null  float64
-     32  tests_per_case                         32050 non-null  float64
-     33  tests_units                            35664 non-null  object 
-     34  total_vaccinations                     1458 non-null   float64
-     35  people_vaccinated                      1201 non-null   float64
-     36  people_fully_vaccinated                657 non-null    float64
-     37  new_vaccinations                       1214 non-null   float64
-     38  new_vaccinations_smoothed              2029 non-null   float64
-     39  total_vaccinations_per_hundred         1458 non-null   float64
-     40  people_vaccinated_per_hundred          1201 non-null   float64
-     41  people_fully_vaccinated_per_hundred    657 non-null    float64
-     42  new_vaccinations_smoothed_per_million  2029 non-null   float64
-     43  stringency_index                       57540 non-null  float64
-     44  population                             63993 non-null  float64
-     45  population_density                     62641 non-null  float64
-     46  median_age                             61219 non-null  float64
-     47  aged_65_older                          60511 non-null  float64
-     48  aged_70_older                          60873 non-null  float64
-     49  gdp_per_capita                         61267 non-null  float64
-     50  extreme_poverty                        41923 non-null  float64
-     51  cardiovasc_death_rate                  61892 non-null  float64
-     52  diabetes_prevalence                    62619 non-null  float64
-     53  female_smokers                         48806 non-null  float64
-     54  male_smokers                           48137 non-null  float64
-     55  handwashing_facilities                 31027 non-null  float64
-     56  hospital_beds_per_thousand             56809 non-null  float64
-     57  life_expectancy                        63664 non-null  float64
-     58  human_development_index                61544 non-null  float64
+     17  icu_patients                           7317 non-null   float64
+     18  icu_patients_per_million               7317 non-null   float64
+     19  hosp_patients                          8699 non-null   float64
+     20  hosp_patients_per_million              8699 non-null   float64
+     21  weekly_icu_admissions                  687 non-null    float64
+     22  weekly_icu_admissions_per_million      687 non-null    float64
+     23  weekly_hosp_admissions                 1136 non-null   float64
+     24  weekly_hosp_admissions_per_million     1136 non-null   float64
+     25  new_tests                              31135 non-null  float64
+     26  total_tests                            30936 non-null  float64
+     27  total_tests_per_thousand               30936 non-null  float64
+     28  new_tests_per_thousand                 31135 non-null  float64
+     29  new_tests_smoothed                     35184 non-null  float64
+     30  new_tests_smoothed_per_thousand        35184 non-null  float64
+     31  positive_rate                          33483 non-null  float64
+     32  tests_per_case                         32971 non-null  float64
+     33  tests_units                            36439 non-null  object 
+     34  total_vaccinations                     1940 non-null   float64
+     35  people_vaccinated                      1603 non-null   float64
+     36  people_fully_vaccinated                964 non-null    float64
+     37  new_vaccinations                       1620 non-null   float64
+     38  new_vaccinations_smoothed              2826 non-null   float64
+     39  total_vaccinations_per_hundred         1940 non-null   float64
+     40  people_vaccinated_per_hundred          1603 non-null   float64
+     41  people_fully_vaccinated_per_hundred    964 non-null    float64
+     42  new_vaccinations_smoothed_per_million  2826 non-null   float64
+     43  stringency_index                       58775 non-null  float64
+     44  population                             68392 non-null  float64
+     45  population_density                     64303 non-null  float64
+     46  median_age                             62659 non-null  float64
+     47  aged_65_older                          61935 non-null  float64
+     48  aged_70_older                          62305 non-null  float64
+     49  gdp_per_capita                         62795 non-null  float64
+     50  extreme_poverty                        42923 non-null  float64
+     51  cardiovasc_death_rate                  63404 non-null  float64
+     52  diabetes_prevalence                    64180 non-null  float64
+     53  female_smokers                         49950 non-null  float64
+     54  male_smokers                           49265 non-null  float64
+     55  handwashing_facilities                 31787 non-null  float64
+     56  hospital_beds_per_thousand             58145 non-null  float64
+     57  life_expectancy                        65361 non-null  float64
+     58  human_development_index                63389 non-null  float64
     dtypes: float64(54), object(5)
-    memory usage: 30.1+ MB
+    memory usage: 31.0+ MB
 
 
 # change data type to date
@@ -392,7 +386,7 @@ data['date'].max()
 
 
 
-    Timestamp('2021-02-05 00:00:00')
+    Timestamp('2021-02-13 00:00:00')
 
 
 
@@ -421,23 +415,25 @@ data['location'].unique()
 
 
     array(['Afghanistan', 'Africa', 'Albania', 'Algeria', 'Andorra', 'Angola',
-           'Antigua and Barbuda', 'Argentina', 'Armenia', 'Asia', 'Australia',
-           'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
-           'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
-           'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil',
-           'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia',
-           'Cameroon', 'Canada', 'Cape Verde', 'Central African Republic',
-           'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo',
-           'Costa Rica', "Cote d'Ivoire", 'Croatia', 'Cuba', 'Cyprus',
-           'Czechia', 'Democratic Republic of Congo', 'Denmark', 'Djibouti',
-           'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
-           'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia',
-           'Eswatini', 'Ethiopia', 'Europe', 'European Union', 'Fiji',
-           'Finland', 'France', 'Gabon', 'Gambia', 'Georgia', 'Germany',
-           'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea',
-           'Guinea-Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hong Kong',
-           'Hungary', 'Iceland', 'India', 'Indonesia', 'International',
-           'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan',
+           'Anguilla', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Asia',
+           'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain',
+           'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin',
+           'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina',
+           'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso',
+           'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
+           'Cayman Islands', 'Central African Republic', 'Chad', 'Chile',
+           'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica',
+           "Cote d'Ivoire", 'Croatia', 'Cuba', 'Cyprus', 'Czechia',
+           'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica',
+           'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador',
+           'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia',
+           'Europe', 'European Union', 'Faeroe Islands', 'Fiji', 'Finland',
+           'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana',
+           'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guatemala',
+           'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti',
+           'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India',
+           'Indonesia', 'International', 'Iran', 'Iraq', 'Ireland',
+           'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey',
            'Jordan', 'Kazakhstan', 'Kenya', 'Kosovo', 'Kuwait', 'Kyrgyzstan',
            'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya',
            'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi',
@@ -446,18 +442,19 @@ data['location'].unique()
            'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco',
            'Mozambique', 'Myanmar', 'Namibia', 'Nepal', 'Netherlands',
            'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North America',
-           'North Macedonia', 'Norway', 'Oceania', 'Oman', 'Pakistan',
-           'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru',
-           'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia',
-           'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia',
-           'Saint Vincent and the Grenadines', 'Samoa', 'San Marino',
-           'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia',
-           'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia',
-           'Solomon Islands', 'Somalia', 'South Africa', 'South America',
-           'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan',
-           'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
-           'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo',
-           'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Uganda', 'Ukraine',
+           'North Macedonia', 'Northern Cyprus', 'Norway', 'Oceania', 'Oman',
+           'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay',
+           'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania',
+           'Russia', 'Rwanda', 'Saint Helena', 'Saint Kitts and Nevis',
+           'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa',
+           'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',
+           'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia',
+           'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa',
+           'South America', 'South Korea', 'South Sudan', 'Spain',
+           'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria',
+           'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo',
+           'Trinidad and Tobago', 'Tunisia', 'Turkey',
+           'Turks and Caicos Islands', 'Uganda', 'Ukraine',
            'United Arab Emirates', 'United Kingdom', 'United States',
            'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican', 'Venezuela',
            'Vietnam', 'World', 'Yemen', 'Zambia', 'Zimbabwe'], dtype=object)
@@ -474,65 +471,65 @@ data.isna().sum()/len(data)*100
 
 
 
-    iso_code                                  4.440993
-    continent                                 5.009930
+    iso_code                                  0.000000
+    continent                                 4.996074
     location                                  0.000000
     date                                      0.000000
-    total_cases                               0.912390
-    new_cases                                 0.915376
-    new_cases_smoothed                        2.410142
-    total_deaths                             14.092015
-    new_deaths                               13.856078
-    new_deaths_smoothed                       2.410142
-    total_cases_per_million                   5.345917
-    new_cases_per_million                     5.356370
-    new_cases_smoothed_per_million            6.780952
-    total_deaths_per_million                 18.276166
-    new_deaths_per_million                   18.277659
-    new_deaths_smoothed_per_million           6.780952
-    reproduction_rate                        23.402571
-    icu_patients                             89.297714
-    icu_patients_per_million                 89.297714
-    hosp_patients                            87.278809
-    hosp_patients_per_million                87.278809
-    weekly_icu_admissions                    98.996521
-    weekly_icu_admissions_per_million        98.996521
-    weekly_hosp_admissions                   98.339481
-    weekly_hosp_admissions_per_million       98.339481
-    new_tests                                54.371556
-    total_tests                              54.688130
-    total_tests_per_thousand                 54.688130
-    new_tests_per_thousand                   54.371556
-    new_tests_smoothed                       48.591097
-    new_tests_smoothed_per_thousand          48.591097
-    positive_rate                            51.358132
-    tests_per_case                           52.140607
-    tests_units                              46.743919
-    total_vaccinations                       97.822808
-    people_vaccinated                        98.206579
-    people_fully_vaccinated                  99.018920
-    new_vaccinations                         98.187167
-    new_vaccinations_smoothed                96.970149
-    total_vaccinations_per_hundred           97.822808
-    people_vaccinated_per_hundred            98.206579
-    people_fully_vaccinated_per_hundred      99.018920
-    new_vaccinations_smoothed_per_million    96.970149
-    stringency_index                         14.077083
-    population                                4.440993
-    population_density                        6.459898
-    median_age                                8.583332
-    aged_65_older                             9.640569
-    aged_70_older                             9.100004
-    gdp_per_capita                            8.511655
-    extreme_poverty                          37.397524
-    cardiovasc_death_rate                     7.578359
-    diabetes_prevalence                       6.492750
-    female_smokers                           27.119327
-    male_smokers                             28.118327
-    handwashing_facilities                   53.668225
-    hospital_beds_per_thousand               15.168665
-    life_expectancy                           4.932280
-    human_development_index                   8.098018
+    total_cases                               1.201035
+    new_cases                                 1.203943
+    new_cases_smoothed                        2.659435
+    total_deaths                             14.162329
+    new_deaths                               13.932591
+    new_deaths_smoothed                       2.659435
+    total_cases_per_million                   1.743391
+    new_cases_per_million                     1.746299
+    new_cases_smoothed_per_million            3.194521
+    total_deaths_per_million                 14.685782
+    new_deaths_per_million                   14.456044
+    new_deaths_smoothed_per_million           3.194521
+    reproduction_rate                        25.415128
+    icu_patients                             89.360805
+    icu_patients_per_million                 89.360805
+    hosp_patients                            87.351325
+    hosp_patients_per_million                87.351325
+    weekly_icu_admissions                    99.001076
+    weekly_icu_admissions_per_million        99.001076
+    weekly_hosp_admissions                   98.348213
+    weekly_hosp_admissions_per_million       98.348213
+    new_tests                                54.728531
+    total_tests                              55.017885
+    total_tests_per_thousand                 55.017885
+    new_tests_per_thousand                   54.728531
+    new_tests_smoothed                       48.841132
+    new_tests_smoothed_per_thousand          48.841132
+    positive_rate                            51.314450
+    tests_per_case                           52.058918
+    tests_units                              47.016314
+    total_vaccinations                       97.179167
+    people_vaccinated                        97.669177
+    people_fully_vaccinated                  98.598307
+    new_vaccinations                         97.644459
+    new_vaccinations_smoothed                95.890889
+    total_vaccinations_per_hundred           97.179167
+    people_vaccinated_per_hundred            97.669177
+    people_fully_vaccinated_per_hundred      98.598307
+    new_vaccinations_smoothed_per_million    95.890889
+    stringency_index                         14.538925
+    population                                0.555442
+    population_density                        6.501003
+    median_age                                8.891442
+    aged_65_older                             9.944165
+    aged_70_older                             9.406171
+    gdp_per_capita                            8.693692
+    extreme_poverty                          37.588333
+    cardiovasc_death_rate                     7.808183
+    diabetes_prevalence                       6.679850
+    female_smokers                           27.370809
+    male_smokers                             28.366825
+    handwashing_facilities                   53.780498
+    hospital_beds_per_thousand               15.454968
+    life_expectancy                           4.962631
+    human_development_index                   7.829994
     dtype: float64
 
 
@@ -543,181 +540,27 @@ data.isna().sum()/len(data)*100
 
 
 ```python
-sorted = data.loc[data['date']==data['date'].max(), ['date','location', 'total_cases']].sort_values(by ='total_cases', ascending = False)
+data_sorted = data.loc[data['date']==data['date'].max(), ['date','location', 'total_cases']].sort_values(by ='total_cases', ascending = False)
 ```
 
 
 ```python
-sorted.head(21)
+regions = ['Asia', 'Africa', 'Europe', 'European Union', 'North America', 'Oceania', 'South America', 'World']
 ```
 
 
+```python
+countries_sorted =data_sorted[~data_sorted['location'].isin(regions)]
+```
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>location</th>
-      <th>total_cases</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>66016</th>
-      <td>2021-02-05</td>
-      <td>World</td>
-      <td>105392577.0</td>
-    </tr>
-    <tr>
-      <th>20808</th>
-      <td>2021-02-05</td>
-      <td>Europe</td>
-      <td>31229534.0</td>
-    </tr>
-    <tr>
-      <th>44323</th>
-      <td>2021-02-05</td>
-      <td>North America</td>
-      <td>30741635.0</td>
-    </tr>
-    <tr>
-      <th>63843</th>
-      <td>2021-02-05</td>
-      <td>United States</td>
-      <td>26813772.0</td>
-    </tr>
-    <tr>
-      <th>3519</th>
-      <td>2021-02-05</td>
-      <td>Asia</td>
-      <td>23466403.0</td>
-    </tr>
-    <tr>
-      <th>21188</th>
-      <td>2021-02-05</td>
-      <td>European Union</td>
-      <td>20265211.0</td>
-    </tr>
-    <tr>
-      <th>55832</th>
-      <td>2021-02-05</td>
-      <td>South America</td>
-      <td>16277157.0</td>
-    </tr>
-    <tr>
-      <th>27827</th>
-      <td>2021-02-05</td>
-      <td>India</td>
-      <td>10814304.0</td>
-    </tr>
-    <tr>
-      <th>8951</th>
-      <td>2021-02-05</td>
-      <td>Brazil</td>
-      <td>9447165.0</td>
-    </tr>
-    <tr>
-      <th>63462</th>
-      <td>2021-02-05</td>
-      <td>United Kingdom</td>
-      <td>3922910.0</td>
-    </tr>
-    <tr>
-      <th>49878</th>
-      <td>2021-02-05</td>
-      <td>Russia</td>
-      <td>3891274.0</td>
-    </tr>
-    <tr>
-      <th>706</th>
-      <td>2021-02-05</td>
-      <td>Africa</td>
-      <td>3644992.0</td>
-    </tr>
-    <tr>
-      <th>22314</th>
-      <td>2021-02-05</td>
-      <td>France</td>
-      <td>3355678.0</td>
-    </tr>
-    <tr>
-      <th>56892</th>
-      <td>2021-02-05</td>
-      <td>Spain</td>
-      <td>2941990.0</td>
-    </tr>
-    <tr>
-      <th>30301</th>
-      <td>2021-02-05</td>
-      <td>Italy</td>
-      <td>2611659.0</td>
-    </tr>
-    <tr>
-      <th>62054</th>
-      <td>2021-02-05</td>
-      <td>Turkey</td>
-      <td>2516889.0</td>
-    </tr>
-    <tr>
-      <th>23691</th>
-      <td>2021-02-05</td>
-      <td>Germany</td>
-      <td>2276371.0</td>
-    </tr>
-    <tr>
-      <th>13397</th>
-      <td>2021-02-05</td>
-      <td>Colombia</td>
-      <td>2142660.0</td>
-    </tr>
-    <tr>
-      <th>2796</th>
-      <td>2021-02-05</td>
-      <td>Argentina</td>
-      <td>1970009.0</td>
-    </tr>
-    <tr>
-      <th>39197</th>
-      <td>2021-02-05</td>
-      <td>Mexico</td>
-      <td>1912871.0</td>
-    </tr>
-    <tr>
-      <th>48471</th>
-      <td>2021-02-05</td>
-      <td>Poland</td>
-      <td>1539564.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-## bar charts
+## Bar Charts
 
 ## create value series
 
 
 ```python
-top_20_countries = sorted['location'][1:].head(20)
-top_20_cases = round(sorted['total_cases'][1:].head(20)/1000, 2)
+top_20_countries = countries_sorted['location'].head(20)
+top_20_cases = round(countries_sorted['total_cases'].head(20)/1000, 2)
 ```
 
 ## create bar chart
@@ -726,7 +569,7 @@ top_20_cases = round(sorted['total_cases'][1:].head(20)/1000, 2)
 ```python
 fig,ax = plt.subplots(figsize = (35,15))
 rect = ax.barh(top_20_countries, top_20_cases, align = 'center', color = ['red', 'blue','orange','green', 'brown'])
-ax.set_title("20 Countries with Highest Cumulative Covid-19 Cases", fontsize = 30)
+ax.set_title("20 Countries with Highest Cumulative Covid-19 Cases (in thousands)", fontsize = 30)
 ax.set_xlabel('Case Numbers in Thousands', fontsize = 25)
 ax.invert_yaxis()
 ax.tick_params(axis='y', labelsize = 25)
@@ -739,118 +582,25 @@ ax.get_xaxis().set_major_formatter(mlib.ticker.FuncFormatter(lambda x, p: format
 
 
     
-![png](output_30_0.png)
+![png](output_31_0.png)
     
-
-
-
-```python
-data.loc[data['location'].isin(['United States']), ['date', 'total_cases']]
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>total_cases</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>63463</th>
-      <td>2020-01-22</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>63464</th>
-      <td>2020-01-23</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>63465</th>
-      <td>2020-01-24</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>63466</th>
-      <td>2020-01-25</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>63467</th>
-      <td>2020-01-26</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>63839</th>
-      <td>2021-02-01</td>
-      <td>26321120.0</td>
-    </tr>
-    <tr>
-      <th>63840</th>
-      <td>2021-02-02</td>
-      <td>26435557.0</td>
-    </tr>
-    <tr>
-      <th>63841</th>
-      <td>2021-02-03</td>
-      <td>26557026.0</td>
-    </tr>
-    <tr>
-      <th>63842</th>
-      <td>2021-02-04</td>
-      <td>26680214.0</td>
-    </tr>
-    <tr>
-      <th>63843</th>
-      <td>2021-02-05</td>
-      <td>26813772.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>381 rows × 2 columns</p>
-</div>
-
 
 
 # Top 20 countries with highest cumulative infection rates
 
 
 ```python
-sorted_pop = data.loc[data['date']==data['date'].max(), ['date', 'location','total_cases', 'population']]
+cases_pm_sorted = data.loc[data['date']==data['date'].max(),['date','location','total_cases_per_million']].sort_values(by='total_cases_per_million', ascending = False)
 ```
 
 
 ```python
-sorted_pop['rate'] = round(sorted_pop['total_cases']/sorted_pop['population']*100,2)
+case_pm_sorted_countries = cases_pm_sorted[~cases_pm_sorted['location'].isin(regions)]
 ```
 
 
 ```python
-sorted_pop.sort_values(by='rate', ascending = False).head(20)
+case_pm_sorted_countries.head(20).round(0)
 ```
 
 
@@ -876,171 +626,129 @@ sorted_pop.sort_values(by='rate', ascending = False).head(20)
       <th></th>
       <th>date</th>
       <th>location</th>
-      <th>total_cases</th>
-      <th>population</th>
-      <th>rate</th>
+      <th>total_cases_per_million</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1741</th>
-      <td>2021-02-05</td>
+      <th>1781</th>
+      <td>2021-02-13</td>
       <td>Andorra</td>
-      <td>10172.0</td>
-      <td>77265.0</td>
-      <td>13.17</td>
+      <td>135417.0</td>
     </tr>
     <tr>
-      <th>40550</th>
-      <td>2021-02-05</td>
+      <th>41685</th>
+      <td>2021-02-13</td>
       <td>Montenegro</td>
-      <td>64168.0</td>
-      <td>628062.0</td>
-      <td>10.22</td>
+      <td>109027.0</td>
     </tr>
     <tr>
-      <th>16034</th>
-      <td>2021-02-05</td>
+      <th>16500</th>
+      <td>2021-02-13</td>
       <td>Czechia</td>
-      <td>1021477.0</td>
-      <td>10708982.0</td>
-      <td>9.54</td>
+      <td>101116.0</td>
     </tr>
     <tr>
-      <th>51608</th>
-      <td>2021-02-05</td>
+      <th>53017</th>
+      <td>2021-02-13</td>
       <td>San Marino</td>
-      <td>3111.0</td>
-      <td>33938.0</td>
-      <td>9.17</td>
+      <td>96588.0</td>
     </tr>
     <tr>
-      <th>54673</th>
-      <td>2021-02-05</td>
+      <th>56154</th>
+      <td>2021-02-13</td>
       <td>Slovenia</td>
-      <td>172299.0</td>
-      <td>2078932.0</td>
-      <td>8.29</td>
+      <td>86173.0</td>
     </tr>
     <tr>
-      <th>36006</th>
-      <td>2021-02-05</td>
+      <th>37021</th>
+      <td>2021-02-13</td>
       <td>Luxembourg</td>
-      <td>51512.0</td>
-      <td>625976.0</td>
-      <td>8.23</td>
+      <td>83931.0</td>
     </tr>
     <tr>
-      <th>63843</th>
-      <td>2021-02-05</td>
-      <td>United States</td>
-      <td>26813772.0</td>
-      <td>331002647.0</td>
-      <td>8.10</td>
-    </tr>
-    <tr>
-      <th>29929</th>
-      <td>2021-02-05</td>
+      <th>30785</th>
+      <td>2021-02-13</td>
       <td>Israel</td>
-      <td>680856.0</td>
-      <td>8655541.0</td>
-      <td>7.87</td>
+      <td>83397.0</td>
     </tr>
     <tr>
-      <th>46763</th>
-      <td>2021-02-05</td>
-      <td>Panama</td>
-      <td>325487.0</td>
-      <td>4314768.0</td>
-      <td>7.54</td>
+      <th>65570</th>
+      <td>2021-02-13</td>
+      <td>United States</td>
+      <td>83309.0</td>
     </tr>
     <tr>
-      <th>48817</th>
-      <td>2021-02-05</td>
+      <th>50153</th>
+      <td>2021-02-13</td>
       <td>Portugal</td>
-      <td>755774.0</td>
-      <td>10196707.0</td>
-      <td>7.41</td>
+      <td>76895.0</td>
     </tr>
     <tr>
-      <th>35658</th>
-      <td>2021-02-05</td>
+      <th>48051</th>
+      <td>2021-02-13</td>
+      <td>Panama</td>
+      <td>76874.0</td>
+    </tr>
+    <tr>
+      <th>36665</th>
+      <td>2021-02-13</td>
       <td>Lithuania</td>
-      <td>185601.0</td>
-      <td>2722291.0</td>
-      <td>6.82</td>
+      <td>69056.0</td>
     </tr>
     <tr>
-      <th>35314</th>
-      <td>2021-02-05</td>
+      <th>36313</th>
+      <td>2021-02-13</td>
       <td>Liechtenstein</td>
-      <td>2518.0</td>
-      <td>38137.0</td>
-      <td>6.60</td>
+      <td>66550.0</td>
     </tr>
     <tr>
-      <th>23315</th>
-      <td>2021-02-05</td>
+      <th>23962</th>
+      <td>2021-02-13</td>
       <td>Georgia</td>
-      <td>261018.0</td>
-      <td>3989175.0</td>
-      <td>6.54</td>
+      <td>66480.0</td>
     </tr>
     <tr>
-      <th>56892</th>
-      <td>2021-02-05</td>
-      <td>Spain</td>
-      <td>2941990.0</td>
-      <td>46754783.0</td>
-      <td>6.29</td>
-    </tr>
-    <tr>
-      <th>5260</th>
-      <td>2021-02-05</td>
+      <th>5390</th>
+      <td>2021-02-13</td>
       <td>Bahrain</td>
-      <td>106198.0</td>
-      <td>1701583.0</td>
-      <td>6.24</td>
+      <td>65881.0</td>
     </tr>
     <tr>
-      <th>6638</th>
-      <td>2021-02-05</td>
+      <th>58429</th>
+      <td>2021-02-13</td>
+      <td>Spain</td>
+      <td>65363.0</td>
+    </tr>
+    <tr>
+      <th>6800</th>
+      <td>2021-02-13</td>
       <td>Belgium</td>
-      <td>721432.0</td>
-      <td>11589616.0</td>
-      <td>6.22</td>
+      <td>63601.0</td>
     </tr>
     <tr>
-      <th>58678</th>
-      <td>2021-02-05</td>
+      <th>60255</th>
+      <td>2021-02-13</td>
       <td>Switzerland</td>
-      <td>531873.0</td>
-      <td>8654618.0</td>
-      <td>6.15</td>
+      <td>62478.0</td>
     </tr>
     <tr>
-      <th>52945</th>
-      <td>2021-02-05</td>
+      <th>54386</th>
+      <td>2021-02-13</td>
       <td>Serbia</td>
-      <td>404668.0</td>
-      <td>6804596.0</td>
-      <td>5.95</td>
+      <td>61648.0</td>
     </tr>
     <tr>
-      <th>42607</th>
-      <td>2021-02-05</td>
+      <th>43790</th>
+      <td>2021-02-13</td>
       <td>Netherlands</td>
-      <td>1011636.0</td>
-      <td>17134873.0</td>
-      <td>5.90</td>
+      <td>60699.0</td>
     </tr>
     <tr>
-      <th>58299</th>
-      <td>2021-02-05</td>
+      <th>59868</th>
+      <td>2021-02-13</td>
       <td>Sweden</td>
-      <td>588062.0</td>
-      <td>10099270.0</td>
-      <td>5.82</td>
+      <td>60243.0</td>
     </tr>
   </tbody>
 </table>
@@ -1050,21 +758,16 @@ sorted_pop.sort_values(by='rate', ascending = False).head(20)
 
 
 ```python
-sorted_result=sorted_pop.sort_values(by='rate', ascending = False).head(20)
-```
-
-
-```python
-top_20rate_countries=sorted_result['location']
-top_20rate_values = sorted_result['rate']
+top20_countries=case_pm_sorted_countries['location'].head(20)
+# change cases per million to percentages of populations
+top20_values = round(case_pm_sorted_countries['total_cases_per_million']/10000,2).head(20)
 ```
 
 
 ```python
 fig,ax = plt.subplots(figsize=(25,15))
-ax.barh(top_20rate_countries, top_20rate_values,color = ['red', 'blue','orange','green', 'brown'])
-ax.set_title("20 Countries with Highest Cumulative Covid-19 Infection Rates", fontsize = 25)
-ax.set_ylabel('Cumulative Infection Rates in Percentage', fontsize = 20)
+ax.barh(top20_countries, top20_values,color = ['red', 'blue','orange','green', 'brown'])
+ax.set_title("20 Countries with Highest Cumulative Covid-19 Cases as % of Country Population", fontsize = 25)
 ax.tick_params(axis='y', labelsize = 20)
 ax.invert_yaxis()
 ax.spines['top'].set_visible(False) # remove spines for better visual effects
@@ -1073,199 +776,52 @@ ax.spines['bottom'].set_visible(True)
 ax.xaxis.set_ticklabels([]) #remove spine tick labels
 ax.xaxis.set_ticks([]) #remove spine ticks
 
-for i,v in enumerate(top_20rate_values):
-    ax.text(v+0.25,i+0.25,str(v)+'%', fontsize = 20, ha = 'left', va = 'center')
+for i,v in enumerate(case_pm_20_values):
+    ax.text(v+0.25,i+0.25,str(v) + "%", fontsize = 20, ha = 'left', va = 'center')
 
 ```
 
 
     
-![png](output_38_0.png)
+![png](output_37_0.png)
     
 
 
-# Top 20 countries of vaccinations
+# Top 20 countries of total vaccinations
 
 
 ```python
-total_vac = data[['date','location','total_vaccinations', 'new_cases_smoothed_per_million', 'stringency_index']]
+total_vac = data[['date','location','total_vaccinations', 'total_vaccinations_per_hundred','new_cases_smoothed_per_million', 'stringency_index']]
+total_vac = total_vac[~total_vac['location'].isin(regions)]
 ```
 
 
 ```python
-top_vac = total_vac.loc[total_vac['date']== total_vac['date'].max(), ['date', 'location', 'total_vaccinations']]
+total_vac_dropna = total_vac.dropna(subset = ['total_vaccinations'])
+    
 ```
 
 
 ```python
-top_vac_sorted = top_vac.sort_values(by = 'total_vaccinations', ascending = False).head(22) #world and EU are in top 20/
+total_vac_grouped = total_vac_dropna.groupby(['location']).max()
 ```
 
 
 ```python
-exl = ['World', 'European Union']
-top_vac_20 = top_vac_sorted.loc[~top_vac_sorted['location'].isin(exl)]
-top_vac_20
-
+top_vac_20 = total_vac_grouped.sort_values(by = 'total_vaccinations', ascending = False).head(20)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>location</th>
-      <th>total_vaccinations</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>63843</th>
-      <td>2021-02-05</td>
-      <td>United States</td>
-      <td>36819212.0</td>
-    </tr>
-    <tr>
-      <th>27827</th>
-      <td>2021-02-05</td>
-      <td>India</td>
-      <td>5416849.0</td>
-    </tr>
-    <tr>
-      <th>29929</th>
-      <td>2021-02-05</td>
-      <td>Israel</td>
-      <td>5376768.0</td>
-    </tr>
-    <tr>
-      <th>23691</th>
-      <td>2021-02-05</td>
-      <td>Germany</td>
-      <td>3116122.0</td>
-    </tr>
-    <tr>
-      <th>8951</th>
-      <td>2021-02-05</td>
-      <td>Brazil</td>
-      <td>3074906.0</td>
-    </tr>
-    <tr>
-      <th>62054</th>
-      <td>2021-02-05</td>
-      <td>Turkey</td>
-      <td>2559802.0</td>
-    </tr>
-    <tr>
-      <th>30301</th>
-      <td>2021-02-05</td>
-      <td>Italy</td>
-      <td>2435489.0</td>
-    </tr>
-    <tr>
-      <th>48471</th>
-      <td>2021-02-05</td>
-      <td>Poland</td>
-      <td>1617764.0</td>
-    </tr>
-    <tr>
-      <th>11355</th>
-      <td>2021-02-05</td>
-      <td>Canada</td>
-      <td>1042171.0</td>
-    </tr>
-    <tr>
-      <th>28168</th>
-      <td>2021-02-05</td>
-      <td>Indonesia</td>
-      <td>865609.0</td>
-    </tr>
-    <tr>
-      <th>49506</th>
-      <td>2021-02-05</td>
-      <td>Romania</td>
-      <td>821552.0</td>
-    </tr>
-    <tr>
-      <th>39197</th>
-      <td>2021-02-05</td>
-      <td>Mexico</td>
-      <td>700316.0</td>
-    </tr>
-    <tr>
-      <th>12679</th>
-      <td>2021-02-05</td>
-      <td>Chile</td>
-      <td>569886.0</td>
-    </tr>
-    <tr>
-      <th>52945</th>
-      <td>2021-02-05</td>
-      <td>Serbia</td>
-      <td>538373.0</td>
-    </tr>
-    <tr>
-      <th>6638</th>
-      <td>2021-02-05</td>
-      <td>Belgium</td>
-      <td>410505.0</td>
-    </tr>
-    <tr>
-      <th>40915</th>
-      <td>2021-02-05</td>
-      <td>Morocco</td>
-      <td>408235.0</td>
-    </tr>
-    <tr>
-      <th>24370</th>
-      <td>2021-02-05</td>
-      <td>Greece</td>
-      <td>380136.0</td>
-    </tr>
-    <tr>
-      <th>42607</th>
-      <td>2021-02-05</td>
-      <td>Netherlands</td>
-      <td>356517.0</td>
-    </tr>
-    <tr>
-      <th>58299</th>
-      <td>2021-02-05</td>
-      <td>Sweden</td>
-      <td>343872.0</td>
-    </tr>
-    <tr>
-      <th>16034</th>
-      <td>2021-02-05</td>
-      <td>Czechia</td>
-      <td>343269.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+```python
+type(top_vac_20)
+top_vac_20.index
+top_vac_20=top_vac_20.reset_index() # reset groupby object index
+```
 
 
 ```python
 top_vac_values = top_vac_20['total_vaccinations'].astype(int)
-top_vac_countries= top_vac_20['location']
+top_vac_countries = top_vac_20['location']
 ```
 
 
@@ -1282,12 +838,12 @@ ax.invert_yaxis()
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 
-# format x axis label value in thousands
+# format x axis label value with thousand separator
 ax.get_xaxis().set_major_formatter(mlib.ticker.FuncFormatter(lambda x, p: format(int(x), ',')))
 
-# show bar values, format values with ','
+# show bar values, format values with 'M'and 2 decimals
 for i,v in enumerate(top_vac_values):
-    ax.text(v+1, i+0.25, str(format(v,',')), fontsize = 20)
+    ax.text(v+1, i+0.25,f"{v/1000000:.02f}M", fontsize = 20)
 ```
 
 
@@ -1296,37 +852,34 @@ for i,v in enumerate(top_vac_values):
     
 
 
-
-```python
-## Top countries with vaccinations per 100 people
-```
+# Top 20 countries with vaccinations per 100 people
 
 
 ```python
 total_vac_per100 = data[['date','location', 'total_vaccinations_per_hundred']]
-total_vac_per100_lt = total_vac_per100.loc[total_vac_per100['date']==total_vac_per100['date'].max(), \
-                                           ['location', 'total_vaccinations_per_hundred']]
-vac_per100_sorted = total_vac_per100_lt.sort_values(by = 'total_vaccinations_per_hundred', ascending = False)
+total_vac_per100 = total_vac_per100[~total_vac_per100['location'].isin(regions)]
 ```
 
 
 ```python
-top_vac_per100 = vac_per100_sorted.head(21)
-top_vac_per100 = top_vac_per100[top_vac_per100['location'] !='European Union']
-len(top_vac_per100)
+total_vac_per100_dropna = total_vac_per100.dropna(subset = ['total_vaccinations_per_hundred'])
 ```
 
 
-
-
-    20
-
-
+```python
+total_vac_per100_grouped = total_vac_per100_dropna.groupby(['location']).max()
+```
 
 
 ```python
-top_vac_per100_values = top_vac_per100['total_vaccinations_per_hundred']
-top_vac_per100_countries = top_vac_per100['location']
+vac_per100_top20 = total_vac_per100_grouped.sort_values(by = "total_vaccinations_per_hundred", ascending = False).head(20)
+vac_per100_top20 = vac_per100_top20.reset_index()
+```
+
+
+```python
+top_vac_per100_values = vac_per100_top20['total_vaccinations_per_hundred']
+top_vac_per100_countries = vac_per100_top20['location']
 ```
 
 
@@ -1343,17 +896,64 @@ ax.invert_yaxis()
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 
-# format x axis label value in thousands
-ax.get_xaxis().set_major_formatter(mlib.ticker.FuncFormatter(lambda x, p: format(int(x), ',')))
 
-# show bar values, format values with ','
+# show bar values
 for i,v in enumerate(top_vac_per100_values):
-    ax.text(v+1, i+0.25, str(format(v,',')), fontsize = 20)
+    ax.text(v+1, i+0.25, str(v), fontsize = 20)
 ```
 
 
     
-![png](output_50_0.png)
+![png](output_52_0.png)
+    
+
+
+# Vaccinations Per 100 Ppl in 20 Countries with Highest Cumulative Case Counts
+
+
+```python
+top_cumu_vac_per100 = data.loc[data['location'].isin(top_20_countries), ['date', 'location', 'total_vaccinations_per_hundred']]
+```
+
+
+```python
+top_cumu_vac_per100_dropna = top_cumu_vac_per100.dropna(subset =['total_vaccinations_per_hundred'])
+```
+
+
+```python
+top_cumu_vac_per100_sorted = top_cumu_vac_per100_dropna.groupby(['location']).max().sort_values(by = 'total_vaccinations_per_hundred', ascending = False)
+top_cumu_vac_per100_data = top_cumu_vac_per100_sorted.reset_index()
+```
+
+
+```python
+top_cumu_vac_per100_countries = top_cumu_vac_per100_data['location']
+top_cumu_vac_per100_values = top_cumu_vac_per100_data['total_vaccinations_per_hundred']
+```
+
+
+```python
+fig,ax = plt.subplots(figsize = (25,15))
+rect = ax.barh(top_cumu_vac_per100_countries, top_cumu_vac_per100_values, color = ['red', 'blue','orange','green', 'brown'])
+
+ax.set_title("Vaccinations Per Hundred People for 20 Countries with Highest Cumulative Case Counts (No Data: Ukraine, South Africa, Colombia)", fontsize = 30)
+ax.set_xlabel('Total Vaccinations Per Hundred People', labelpad = 10, fontsize = 25)
+ax.tick_params(axis= 'y', labelsize = 25)
+ax.tick_params(axis='x', labelsize =25)
+ax.invert_yaxis()
+# remove spines for better visual effects
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+
+
+for i,v in enumerate(top_cumu_vac_per100_values):
+    ax.text(v+1, i+0.25, str(v), fontsize = 20)
+```
+
+
+    
+![png](output_58_0.png)
     
 
 
@@ -1394,7 +994,7 @@ plt.show()
 
 
     
-![png](output_54_0.png)
+![png](output_62_0.png)
     
 
 
@@ -1412,7 +1012,7 @@ ax.set_title('Israel: New Cases vs. Government Stringency Index', fontsize=25)
 
 ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
 
-color = 'blue'
+color = 'green'
 ax2.set_ylabel('Stringency Index', color=color, fontsize =20)  # we already handled the x-label with ax1
 ax2.plot(Israel_vac['date'], Israel_vac['stringency_index'], color=color)
 ax2.tick_params(axis='y', labelcolor=color, labelsize =20)
@@ -1423,7 +1023,7 @@ plt.show()
 
 
     
-![png](output_56_0.png)
+![png](output_64_0.png)
     
 
 
@@ -1484,7 +1084,7 @@ plt.show()
 
 
     
-![png](output_58_0.png)
+![png](output_66_0.png)
     
 
 
@@ -1524,7 +1124,7 @@ plt.show()
 
 
     
-![png](output_62_0.png)
+![png](output_70_0.png)
     
 
 
@@ -1542,7 +1142,7 @@ ax.set_title('US: New Cases vs. Government Stringency Index', fontsize=25)
 
 ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
 
-color = 'blue'
+color = 'green'
 ax2.set_ylabel('Stringency Index', color=color, fontsize =20)  # we already handled the x-label with ax1
 ax2.plot(US_vac['date'], US_vac['stringency_index'], color=color)
 ax2.tick_params(axis='y', labelcolor=color, labelsize = 20)
@@ -1553,7 +1153,7 @@ plt.show()
 
 
     
-![png](output_64_0.png)
+![png](output_72_0.png)
     
 
 
@@ -1614,7 +1214,7 @@ plt.show()
 
 
     
-![png](output_66_0.png)
+![png](output_74_0.png)
     
 
 
@@ -1653,7 +1253,7 @@ plt.show()
 
 
     
-![png](output_70_0.png)
+![png](output_78_0.png)
     
 
 
@@ -1672,7 +1272,7 @@ ax.set_title('India: New Cases vs.Government Stringency Index', fontsize=20)
 
 ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
 
-color = 'blue'
+color = 'green'
 ax2.set_ylabel('Stringency Index', color=color, fontsize =20)  # we already handled the x-label with ax1
 ax2.plot(India_vac['date'], India_vac['stringency_index'], color=color)
 ax2.tick_params(axis='y', labelcolor=color, labelsize = 20)
@@ -1683,7 +1283,7 @@ plt.show()
 
 
     
-![png](output_72_0.png)
+![png](output_80_0.png)
     
 
 
@@ -1744,7 +1344,7 @@ plt.show()
 
 
     
-![png](output_74_0.png)
+![png](output_82_0.png)
     
 
 
@@ -1811,7 +1411,7 @@ plt.show()
 
 
     
-![png](output_77_0.png)
+![png](output_85_0.png)
     
 
 
